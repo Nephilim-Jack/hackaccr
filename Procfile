@@ -1,1 +1,1 @@
-web: gunicorn hackaccr.wsgi
+web: gunicorn ccrhacka.wsgi
