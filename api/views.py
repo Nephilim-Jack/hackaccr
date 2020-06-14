@@ -34,13 +34,13 @@ def getShipping(request):
 
 def setPoint(request):
     if request.method == 'GET':
-        name = request.GET.get('name')
-        lat = request.GET.get('lat')
-        lng = request.GET.get('lng')
+        name = str(request.GET.get('name'))
+        lat = float(request.GET.get('lat'))
+        lng = float(request.GET.get('lng'))
 
-        restaurant = request.GET.get('restautant')
-        sleep = request.GET.get('sleep')
-        secure = request.GET.get('secure')
+        restaurant = True if request.GET.get('restautant') == 'true' else False
+        sleep = True if request.GET.get('sleep') == 'true' else False
+        secure = True if request.GET.get('secure') == 'true' else False
 
         point = Point(
             name=name,
