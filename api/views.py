@@ -5,7 +5,7 @@ from .utils import calculateDistance, calculateShipping
 
 
 def index(request):
-    return HttpResponse('pain page of api use /getNearestPoint or /getShipping')
+    return HttpResponse('main page of api use /getNearestPoint or /getShipping')
 
 
 def getNearestPoint(request):
